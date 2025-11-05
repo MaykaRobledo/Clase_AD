@@ -20,8 +20,8 @@ public class DepartamentoDAOImpl implements DepartamentoDAO {
 			
 			PreparedStatement sentencia = conn.prepareStatement("INSERT INTO `empresa`.`departamentos` (`dnombre`, `loc`) VALUES (?, ?);\r\n");
 			
-			sentencia.setString(1, "RRHH");
-			sentencia.setString(2, "Burgos");
+			sentencia.setString(1, dpto.getDepNombre());
+			sentencia.setString(2, dpto.getDepLocalidad());
 			return sentencia.executeUpdate();
 
 			

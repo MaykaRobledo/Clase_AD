@@ -2,8 +2,8 @@ package ut2_ejercicio17.modelo.dto;
 
 public class DepartamentoDTO {
 	private int depNum;
-	private String apellido1;
-	private String apellido2;
+	private String depNombre;
+	private String depLocalidad;
 	
 	public DepartamentoDTO() {
 		
@@ -17,33 +17,36 @@ public class DepartamentoDTO {
 		this.depNum = depNum;
 	}
 
-	public String getApellido1() {
-		return apellido1;
+	public String getDepNombre() {
+		return depNombre;
 	}
 
-	public void setApellido1(String apellido1) {
-		this.apellido1 = apellido1;
+	public void setDepNombre(String depNombre) {
+		this.depNombre = depNombre;
 	}
 
-	public String getApellido2() {
-		return apellido2;
+	public String getDepLocalidad() {
+		return depLocalidad;
 	}
 
-	public void setApellido2(String apellido2) {
-		this.apellido2 = apellido2;
-	}
-
-	public DepartamentoDTO(int depNum, String apellido1, String apellido2) {
-		super();
-		this.depNum = depNum;
-		this.apellido1 = apellido1;
-		this.apellido2 = apellido2;
+	public void setDepLocalidad(String depLocalidad) {
+		this.depLocalidad = depLocalidad;
 	}
 
 	@Override
 	public String toString() {
-		return "DepartamentoDTO [depNum=" + depNum + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + "]";
+		return "DepartamentoDTO [depNum=" + depNum + ", depNombre=" + depNombre + ", depLocalidad=" + depLocalidad
+				+ "]";
 	}
+
+	public DepartamentoDTO(int depNum, String depNombre, String depLocalidad) {
+		super();
+		this.depNum = depNum;
+		this.depNombre = depNombre;
+		this.depLocalidad = depLocalidad;
+	}
+
+	
 
 	
 	
