@@ -15,10 +15,10 @@ public class DepartamentoDAOImpl implements DepartamentoDAO {
 	public int añadirDpto(DepartamentoDTO dpto){
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://10.0.2.15:3306:empresa", "root", "toor");
+			conn = DriverManager.getConnection("jdbc:mysql://10.196.52.166:3306/empresa", "root", "toor");
 			
 			
-			PreparedStatement sentencia = conn.prepareStatement("INSERT INTO `empresa`.`departamentos` (`dnombre`, `loc`) VALUES (?, ?);\r\n");
+			PreparedStatement sentencia = conn.prepareStatement("INSERT INTO `empresa`.`departamentos` (`dnombre`, `loc`) VALUES (?, ?);");
 			
 			sentencia.setString(1, dpto.getDepNombre());
 			sentencia.setString(2, dpto.getDepLocalidad());
