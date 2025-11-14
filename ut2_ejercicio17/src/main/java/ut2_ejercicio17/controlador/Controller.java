@@ -46,6 +46,7 @@ public class Controller {
 		dptoDTO.setDepNombre(txtNombreDpto.getText());
 		dptoDTO.setDepLocalidad(txtLocalidadDpto.getText());
 		dptoDAO.añadirDpto(dptoDTO);
+		cargarDepartamentos();
 		
 		txtNombreDpto.setText(null);
 		txtLocalidadDpto.setText(null);
@@ -58,8 +59,11 @@ public class Controller {
 		colIdDpto.setCellValueFactory(new PropertyValueFactory<>("depNum"));
 		colLocalidadDpto.setCellValueFactory(new PropertyValueFactory<>("depLocalidad"));
 		colNombreDpto.setCellValueFactory(new PropertyValueFactory<>("depNombre"));
+		cargarDepartamentos();
 		
-		
+
+		}
+	private void cargarDepartamentos(){
 		DepartamentoDAO dptoDAO = new DepartamentoDAOImpl();
 		ArrayList<DepartamentoDTOPropiedadesJavaFX> alDptoJFX = new ArrayList<DepartamentoDTOPropiedadesJavaFX>();
 		for(DepartamentoDTO dpto : dptoDAO.listarDptos()) {
@@ -74,6 +78,7 @@ public class Controller {
 		
 
     }
+
 	
 
 }
